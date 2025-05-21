@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  vulnerable-box:
+    image: codechris01/vuln_dock:latest
+    container_name: vuln_dock_container
+    ports:
+      - "2222:22" # SSH
+      - "8080:80" # HTTP
+      - "2121:21" # FTP
+    tty: true
